@@ -59,10 +59,6 @@ EMAIL_SUBJECT_PREFIX = '[Cider的博客]'
 EMAIL_USE_SSL = True  # 启动安全链接
 
 # 日志文件
-ADMINS = (
-    ('admin', '2864595564@qq.com'),
-)
-
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -72,22 +68,12 @@ LOGGING = {
             'class': 'logging.FileHandler',
             'filename': '/home/mysite_debug.log',
         },
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'filters': ['special']
-        }
     },
     'loggers': {
         'django': {
             'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': True,
-        },
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': False,
         },
     },
 }
