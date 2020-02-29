@@ -18,7 +18,7 @@ from .base import *
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '7&^1)pz)cdi0o3zwrs)z6*aj8=f5vl7zbzz4pu2gw8rb@9m2!1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -35,13 +35,12 @@ DATABASES = {
     }
 }
 '''
-DATABASE_PASSWORD = os.environ['DATABASE_PASSWORD']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mysite_db',
         'USER': 'fitness',
-        'PASSWORD': DATABASE_PASSWORD,
+        'PASSWORD': 'fitness123456',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -54,7 +53,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.qq.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'hanjiangong.swust@qq.com'
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD'] # 授权码
+EMAIL_HOST_PASSWORD = 'msxigneuymqadgca' # 授权码
 EMAIL_SUBJECT_PREFIX = '[Cider的博客]'
 EMAIL_USE_SSL = True  # 启动安全链接
 
